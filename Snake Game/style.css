@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+
+    #game-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background: #000;
+      border: 5px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+      overflow: hidden; /* Ensure that the snake doesn't overflow the boundaries */
+    }
+
+    .snake {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      border: 1px solid #004d00;
+      box-sizing: border-box;
+      transition: all 0.1s;
+    }
+
+    .food {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle, #ff5f6d, #ffc371);
+      border-radius: 50%;
+    }
+
+    #score, #high-score {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    #high-score {
+      top: 50px;
+    }
+
+    @media (max-width: 450px) {
+      #game-container {
+        width: 90%;
+        height: 90%;
+      }
+
+      .snake, .food {
+        width: 5%;
+        height: 5%;
+      }
+
+      #score, #high-score {
+        font-size: 1em;
+        top: 15px;
+      }
+
+      #high-score {
+        top: 35px;
+      }
+    }
+
+    #pause-button {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      cursor: pointer;
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #theme-selector {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      cursor: pointer;
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
