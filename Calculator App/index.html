@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator Program in JavaScript</title>
+    <link rel="stylesheet" 
+          href="style.css">
+</head>
+<body data-theme="dark">
+    <h1>Calculator Program in JavaScript</h1>
+    <div class="theme-toggle" onclick="toggleTheme()">Toggle Dark/Light Mode</div>
+    <div class="formstyle">
+        <form name="form1">
+            <input class="textview" name="textview" aria-label="Calculator Display" readonly>
+        </form>
+        <center>
+            <table>
+                <tr>
+                    <td><input class="btn" type="button" value="C" aria-label="Clear" onclick="form1.textview.value = ''"></td>
+                    <td><input class="btn" type="button" value="B" aria-label="Backspace" onclick="backspace()"></td>
+                    <td><input class="btn operator" type="button" value="/" aria-label="Divide" onclick="insert('/')"></td>
+                    <td><input class="btn operator" type="button" value="x" aria-label="Multiply" onclick="insert('*')"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" type="button" value="7" aria-label="7" onclick="insert(7)"></td>
+                    <td><input class="btn" type="button" value="8" aria-label="8" onclick="insert(8)"></td>
+                    <td><input class="btn" type="button" value="9" aria-label="9" onclick="insert(9)"></td>
+                    <td><input class="btn operator" type="button" value="-" aria-label="Subtract" onclick="insert('-')"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" type="button" value="4" aria-label="4" onclick="insert(4)"></td>
+                    <td><input class="btn" type="button" value="5" aria-label="5" onclick="insert(5)"></td>
+                    <td><input class="btn" type="button" value="6" aria-label="6" onclick="insert(6)"></td>
+                    <td><input class="btn operator" type="button" value="+" aria-label="Add" onclick="insert('+')"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" type="button" value="1" aria-label="1" onclick="insert(1)"></td>
+                    <td><input class="btn" type="button" value="2" aria-label="2" onclick="insert(2)"></td>
+                    <td><input class="btn" type="button" value="3" aria-label="3" onclick="insert(3)"></td>
+                    <td rowspan="5"><input class="btn equal-sign" style="height: 130px" aria-label="Equals" type="button" value="=" onclick="equal()"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="btn" style="width: 130px" aria-label="0" type="button" value="0" onclick="insert(0)"></td>
+                    <td><input class="btn" aria-label="Decimal" type="button" value="." onclick="insert('.')"></td>
+                </tr>
+            </table>
+        </center>
+    </div>
+    <footer class="page-footer">
+        <div class="container">
+            <small>Made by Pratyush Gupta</small>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
